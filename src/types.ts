@@ -7,6 +7,7 @@ export type Value =
   | { kind: 'tensor'; data: number[]; shape: number[] }
   | { kind: 'future'; promise: Promise<Value> }
   | { kind: 'object'; value: any };
+  | { kind: 'return'; value: Value };   // <-- ADDED
 
 export type Environment = {
   get(name: string): Value;

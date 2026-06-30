@@ -1,0 +1,38 @@
+{
+  "name": "mosla-lang",
+  "version": "0.4.0",
+  "description": "MOSLA – AI-first language with built-in AI",
+  "main": "dist/cli.js",
+  "bin": {
+    "mos": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "test": "jest"
+  },
+  "keywords": ["language", "ai", "robotics", "tensor", "web"],
+  "author": "MOSLA Project",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "moo": "^0.5.2",
+    "readline-sync": "^1.4.10",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/jest": "^29.5.12",
+    "@types/moo": "^0.5.9",
+    "@types/node": "^20.12.7",
+    "@types/readline-sync": "^1.4.8",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  },
+  "files": [
+    "dist",
+    "templates",
+    "README.md"
+  ]
+}

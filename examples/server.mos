@@ -1,0 +1,10 @@
+import mosla.io
+
+serveStatic("./public")
+
+route("GET", "/api/info", function(req, res)
+    json(res, { name: "MOSLA", version: "0.4.0" })
+end)
+
+io.print("Server running on http://localhost:8080")
+startServer(8080)

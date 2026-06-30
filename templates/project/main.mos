@@ -1,0 +1,5 @@
+import mosla.io
+
+function main()
+    io.print("Hello, MOSLA!")
+end

@@ -1,0 +1,16 @@
+import mosla.io
+
+api_get("/hello", function(ctx)
+    ctx.json({ message: "Hello, API!" })
+end)
+
+api_get("/users/:id", function(ctx)
+    ctx.json({ user: "User " + ctx.params.id })
+end)
+
+api_post("/echo", function(ctx)
+    ctx.json({ received: ctx.body })
+end)
+
+io.print("API server on http://localhost:8080")
+startServer(8080)
